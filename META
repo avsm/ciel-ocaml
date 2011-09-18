@@ -1,0 +1,5 @@
+name = "ciel"
+version = "0.1"
+description = "Bindings to the CIEL distributed data-flow engine"
+requires = "unix"
+archive(byte) = "ciel.cma"

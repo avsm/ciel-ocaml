@@ -1,0 +1,10 @@
+{"start":
+    {"handler": "ocaml",
+     "args":
+        {"args":
+            {"binary": "test.bin"}
+        }
+    },
+ "result": [{"__decode_ref__": "noop"}]
+}
+
