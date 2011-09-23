@@ -2,8 +2,8 @@
  "start": 
    { "handler": "ocaml",
      "args": {
-       "binary" : "/Users/avsm/src/git/avsm/ciel-ocaml/examples/test.bin",
-       "args" : [42],
+       "binary" : @BINARY@,
+       "args" : [@ARGLIST@],
        "n_outputs" : 1}
      },
  "result": [ {"__decode_ref__":"noop"} ]

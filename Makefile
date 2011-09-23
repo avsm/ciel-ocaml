@@ -13,7 +13,7 @@ uninstall:
 examples/%.bin: examples/%.ml
 	ocamlc -o $@ -I +site-lib/ciel ciel.cma unix.cma $<
 
-examples: examples/test.bin
+examples: examples/test.bin examples/binomial.bin
 	@ :
 
 clean:

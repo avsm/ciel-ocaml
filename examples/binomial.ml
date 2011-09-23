@@ -14,7 +14,7 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *)
 
-open Cwt
+open Ciel
 open Printf
 
 let init_vals t v rf n =
@@ -74,11 +74,11 @@ let main args =
   ) in
   let rec loop oref = function
   |0 ->
-     input_ref (fun ic -> sprintf "%.9f" (input_value ic)) oref
+    Cwt.input_ref (fun ic -> sprintf "%.9f" (input_value ic)) oref
   |n ->
      let rowto = max 0 (n - chunk) in
      let oref2 = Cwt.spawn_ref (fun () ->
-       input_ref (fun ic ->
+       Cwt.input_ref (fun ic ->
          Cwt.output ~stream:true (process_rows n rowto q drift ic)
        ) oref) in
      loop oref2 (n-chunk)
